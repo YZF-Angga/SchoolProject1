@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://xaruepgghxv5"]
+
+[ext_resource type="Script" path="res://UI/mainmenu.gd" id="1_n63vj"]
+[ext_resource type="Texture2D" uid="uid://k5bs2snfo8aa" path="res://MAP/Sprout Lands - Sprites - Basic pack/Characters/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Big Play Button (2).png" id="2_bhhle"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2fbcp"]
+font_size = 79
+outline_size = 10
+shadow_size = 38
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(1.18522, 1.18363)
+script = ExtResource("1_n63vj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 652.0
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 23.0
+offset_right = 1150.0
+offset_bottom = 144.0
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+text = "The Tale Of Manukrawa"
+label_settings = SubResource("LabelSettings_2fbcp")
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 123.184
+offset_top = 183.334
+offset_right = 318.184
+offset_bottom = 287.334
+scale = Vector2(4.4424, 4.59684)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer2"]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ColorRect/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_bhhle")
+flat = true
+icon_alignment = 1
+
+[connection signal="pressed" from="ColorRect/MarginContainer2/VBoxContainer/Button" to="." method="_on_button_pressed"]
