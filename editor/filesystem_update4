@@ -1,0 +1,5 @@
+res://UI/mainmenu.tscn
+res://world_map.tscn
+res://Player.tscn
+res://UI/h_box_container.tscn
+res://UI/heart_gui.tscn
